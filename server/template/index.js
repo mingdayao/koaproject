@@ -1,5 +1,5 @@
-const commonTpl = require('./common.js')
-
 module.exports = {
-	common: commonTpl,
+	htmlTpl: require('./html'),
+	ejsTpl: require('./ejs'),
+	pugTpl: require('./pug')
 }
