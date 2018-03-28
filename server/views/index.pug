@@ -1,0 +1,9 @@
+extends ./layouts/common
+block title
+  title Koa Server HTML
+
+block content
+  div.container
+    div.row
+      div.col-md-8 Hi #{user.firstname} 
+      div.col-md-4 #{user.lastname}

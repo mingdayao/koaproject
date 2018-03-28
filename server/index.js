@@ -1,14 +1,12 @@
 const Koa =  require('koa');
 const app =  new Koa();
-const { htmlTpl, ejsTpl, pugTpl } = require('./template/index');
-const ejs = require('ejs');
-const pug = require('pug');
+const views = require('koa-views');
+const { resolve } = require('path');
 
-app.use(async(ctx, next) => {
-  ctx.type="text/html, charset=utf-8"
-  //ctx.body = htmlTpl;
-  //ctx.body = ejs.render(ejsTpl, {user:{firstname: 'michael', lastname: 'yao'}});
-  ctx.body = pug.render(pugTpl, {user:{firstname: 'michael', lastname: 'yao'}});
+app.use(views(resolve(__dirname, './views'), {extension: 'pug'}))
+
+app.use(async(ctx) => {
+	await ctx.render('index', {user:{firstname: 'michael', lastname: 'yao'}})
 })
 
 app.listen(4455);
