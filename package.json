@@ -1,0 +1,26 @@
+{
+  "name": "koaproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingdayao/koaproject.git"
+  },
+  "keywords": [
+    "nodejs",
+    "koa2"
+  ],
+  "author": "michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mingdayao/koaproject/issues"
+  },
+  "homepage": "https://github.com/mingdayao/koaproject#readme",
+  "dependencies": {
+    "koa": "^2.5.0"
+  }
+}
